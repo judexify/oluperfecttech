@@ -438,3 +438,638 @@ ion-icon[name="pricetags-outline"] {
   line-height: 1.6;
   margin: 0;
 }
+
+/* how it works sections */
+.how-it-works-section {
+  background-color: rgb(255, 255, 255);
+  padding: 8rem 4.8rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: start;
+  margin: 0 auto;
+}
+
+.how-it-works {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.how-it-works-title {
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.how-it-works-description {
+  font-size: 1.8rem;
+  color: #5a6c7d;
+  margin: 0;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+label {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #34495e;
+  margin-bottom: 0.8rem;
+}
+
+#options {
+  width: 100%;
+  padding: 1.6rem 2rem;
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  color: #2c3e50;
+  background-color: #ffffff;
+  border: 2px solid #f4d03f;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23F4D03F' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 2rem center;
+  padding-right: 5rem;
+}
+
+.options-selected {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 3.2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid #f4d03f;
+  transition: all 0.4s ease;
+  min-height: 45rem;
+}
+
+.selected-options {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  min-height: 38rem;
+}
+
+.selected-options li {
+  font-size: 1.5rem;
+  color: #5a6c7d;
+  line-height: 1.7;
+  padding-left: 3.6rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.selected-options li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.4rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: #f4d03f;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selected-options li::after {
+  content: "✓";
+  position: absolute;
+  left: 0.7rem;
+  top: 0.2rem;
+  color: #2c3e50;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.selected-options li:hover {
+  color: #2c3e50;
+  transform: translateX(4px);
+}
+
+.description-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.description-image img {
+  width: 100%;
+  height: auto;
+  max-height: 60rem;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease;
+}
+
+.description-image img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.options-selected.fade-out {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.options-selected.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* pricing section */
+.pricing {
+  background-color: #fffbf0;
+  padding: 8rem 4.8rem;
+}
+
+.pricing-title {
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: #2c3e50;
+  text-align: center;
+  margin: 0 0 1.6rem 0;
+  line-height: 1.2;
+}
+
+.pricing-description {
+  font-size: 1.8rem;
+  color: #5a6c7d;
+  text-align: center;
+  margin: 0 0 6rem 0;
+  line-height: 1.6;
+}
+
+.pricing-and-plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  max-width: 140rem;
+  margin: 0 auto;
+}
+
+.plan-card {
+  background-color: #ffffff;
+  border: 2px solid #e8e8e8;
+  border-radius: 16px;
+  padding: 3.2rem 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.plan-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  border-color: #f4d03f;
+}
+
+.popular {
+  border-color: #f4d03f;
+  border-width: 3px;
+}
+
+.popular-badge {
+  position: absolute;
+  top: 0;
+  left: -3rem;
+  background: linear-gradient(135deg, #f1c40f 0%, #f4d03f 100%);
+  color: #2c3e50;
+  padding: 0.6rem 4rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.enterprise {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  border-color: #f4d03f;
+  color: #ffffff;
+}
+
+.enterprise .plan-name,
+.enterprise .capacity-label,
+.enterprise .spec-title,
+.enterprise .feature-title,
+.enterprise .price-label {
+  color: #ffffff;
+}
+
+.enterprise .kva-rating {
+  color: #f4d03f;
+}
+
+.enterprise .spec-list li,
+.enterprise .feature-list li {
+  color: #ffffff;
+}
+
+.enterprise .spec-list ion-icon,
+.enterprise .feature-list ion-icon {
+  color: #f4d03f;
+}
+
+.plan-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.6rem;
+  border-bottom: 2px solid #f8f9fa;
+}
+
+.enterprise .plan-header {
+  border-bottom-color: rgba(244, 208, 63, 0.2);
+}
+
+.plan-name {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.plan-badge {
+  background-color: #fff9e6;
+  color: #f1c40f;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.premium-badge {
+  background-color: #fff9e6;
+  color: #f1c40f;
+}
+
+.enterprise-badge {
+  background-color: rgba(244, 208, 63, 0.2);
+  color: #f4d03f;
+}
+
+.badge-text {
+  display: block;
+}
+
+.plan-capacity {
+  text-align: center;
+  padding: 2rem 0;
+  background: linear-gradient(135deg, #fffbf0 0%, #fff9e6 100%);
+  border-radius: 12px;
+}
+
+.enterprise .plan-capacity {
+  background: linear-gradient(
+    135deg,
+    rgba(244, 208, 63, 0.15) 0%,
+    rgba(241, 196, 15, 0.1) 100%
+  );
+}
+
+.kva-rating {
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: #f1c40f;
+  margin: 0 0 0.4rem 0;
+  line-height: 1;
+}
+
+.capacity-label {
+  font-size: 1.3rem;
+  color: #5a6c7d;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.plan-specs {
+  background-color: #f8f9fa;
+  padding: 1.6rem;
+  border-radius: 8px;
+}
+
+.enterprise .plan-specs {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.spec-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #34495e;
+  margin: 0 0 1.2rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.spec-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.spec-list li {
+  font-size: 1.3rem;
+  color: #5a6c7d;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  line-height: 1.5;
+}
+
+.spec-list ion-icon {
+  font-size: 1.8rem;
+  color: #f4d03f;
+  flex-shrink: 0;
+}
+
+.warranty-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+  color: #ffffff;
+  padding: 1rem 1.6rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  justify-content: center;
+}
+
+.warranty-badge ion-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.plan-features {
+  flex-grow: 1;
+}
+
+.feature-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #34495e;
+  margin: 0 0 1.2rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.feature-list li {
+  font-size: 1.3rem;
+  color: #5a6c7d;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  line-height: 1.5;
+}
+
+.feature-list ion-icon {
+  font-size: 1.8rem;
+  color: #27ae60;
+  flex-shrink: 0;
+}
+
+.plan-price {
+  text-align: center;
+  padding: 2rem 0 0 0;
+  border-top: 2px solid #f8f9fa;
+}
+
+.enterprise .plan-price {
+  border-top-color: rgba(244, 208, 63, 0.2);
+}
+
+.price-amount {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0 0 0.8rem 0;
+  letter-spacing: 2px;
+}
+
+.enterprise .price-amount {
+  color: #f4d03f;
+}
+
+.price-label {
+  font-size: 1.2rem;
+  color: #95a5a6;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.enterprise .price-label {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.plan-btn {
+  display: block;
+  text-align: center;
+  background-color: #f4d03f;
+  color: #2c3e50;
+  padding: 1.4rem 2.4rem;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 2px solid #e8b923;
+  transition: all 0.3s ease;
+}
+
+.plan-btn:hover {
+  background-color: #e8b923;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(244, 208, 63, 0.3);
+}
+
+.plan-btn-enterprise {
+  background-color: #f4d03f;
+  color: #2c3e50;
+  border-color: #f4d03f;
+}
+
+.plan-btn-enterprise:hover {
+  background-color: #f1c40f;
+  border-color: #f1c40f;
+}
+
+.plan-more-than-5 {
+  color: #34495e;
+  font-size: 2.4rem;
+  margin-top: 4.8rem;
+  text-align: center;
+  font-weight: 700;
+}
+.form-for-more-than-5 {
+  text-decoration: none;
+  color: #f1c40f;
+}
+/* faq */
+.faq {
+  padding: 8rem 4.8rem;
+  background-color: rgb(255, 255, 255);
+}
+
+.faq h1 {
+  text-align: center;
+  margin-bottom: 4rem;
+  color: #2c3e50;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  overflow: hidden;
+  margin-bottom: 1.2rem;
+}
+
+.faq-question {
+  background-color: rgb(255, 251, 240);
+  width: 100%;
+  padding: 2rem;
+  text-align: left;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease;
+  padding-right: 5rem;
+}
+
+.faq-question:hover {
+  background-color: #e7d9aa;
+}
+
+.faq-question:focus-visible {
+  outline: 2px solid #f1c40f;
+}
+
+.faq-question .arrow {
+  position: absolute;
+  right: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-question.active .arrow {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+.faq-answer.show {
+  background-color: #fff;
+}
+
+.faq-answer p {
+  padding: 2rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* FOOTER  */
+.footer-section {
+  background-color: #34495e;
+  color: #ecf0f1;
+  padding: 4rem 2rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.footer-top > div {
+  flex: 1 1 20rem;
+  min-width: 200px;
+}
+
+.footer-top h3 {
+  font-size: 1.8rem;
+  color: #f1c40f;
+  margin-bottom: 1rem;
+}
+
+.footer-top ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-top li {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.footer-top a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer-top a:hover {
+  color: #f1c40f;
+}
+
+.footer-top ion-icon {
+  font-size: 1.6rem;
+  color: #f1c40f;
+}
+
+.footer-section .logo img {
+  margin-bottom: 1rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 1.4rem;
+  color: #bdc3c7;
+  border-top: 1px solid #2c3e50;
+  padding-top: 1.5rem;
+}
