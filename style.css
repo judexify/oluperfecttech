@@ -145,7 +145,7 @@ body {
 }
 .links {
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   color: #f1c40f;
   font-weight: 600;
 }
@@ -305,7 +305,7 @@ ion-icon[name="menu-outline"] {
   right: -2rem;
   top: 50%;
   transform: translateY(-50%);
-  height: 30%;
+  height: 45%;
   width: 2px;
   background: rgba(255, 255, 255, 0.4);
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
@@ -319,7 +319,122 @@ ion-icon[name="pricetags-outline"] {
 .numbers {
   font-size: 1.6rem;
 }
-/* SERVICES SECTION */
-.hero {
+
+/* Services Section */
+.our-services {
   background-color: #fffbf0;
+  padding: 8rem 4.8rem;
+}
+
+.section-title {
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 1.6rem;
+  line-height: 1.2;
+}
+
+.section-description {
+  font-size: 1.8rem;
+  color: #5a6c7d;
+  text-align: center;
+  margin-bottom: 6rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.services-one,
+.services-two,
+.services-three,
+.services-four,
+.services-five,
+.services-six {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 3.2rem 2.4rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  border: 2px solid transparent;
+}
+
+.services-one:hover,
+.services-two:hover,
+.services-three:hover,
+.services-four:hover,
+.services-five:hover,
+.services-six:hover {
+  transform: translateY(-8px);
+}
+
+.icon {
+  width: 8rem;
+  height: 8rem;
+  background: linear-gradient(135deg, #fff9e6 0%, #fffbf0 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.services-one:hover .icon,
+.services-two:hover .icon,
+.services-three:hover .icon,
+.services-four:hover .icon,
+.services-five:hover .icon,
+.services-six:hover .icon {
+  background: linear-gradient(135deg, #f4d03f 0%, #f1c40f 100%);
+  transform: scale(1.1);
+}
+
+.icon img {
+  width: 6.4rem;
+  height: 6.4rem;
+  filter: grayscale(0%) brightness(0.8);
+  transition: all 0.3s ease;
+}
+
+.services-one:hover .icon img,
+.services-two:hover .icon img,
+.services-three:hover .icon img,
+.services-four:hover .icon img,
+.services-five:hover .icon img,
+.services-six:hover .icon img {
+  filter: grayscale(0%) brightness(1.2);
+  transform: rotate(5deg);
+}
+
+.main-service {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.service-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.service-description {
+  font-size: 1.4rem;
+  color: #5a6c7d;
+  line-height: 1.6;
+  margin: 0;
 }
