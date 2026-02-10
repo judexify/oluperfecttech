@@ -44,8 +44,41 @@ const smoothScroll = function (btn, section) {
   });
 };
 
+// lazy loading of images
+const lazyLoading = function () {
+  const lazyElements = document.querySelectorAll(".hero-section, .lazy-img");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+
+          if (el.classList.contains("hero-section")) {
+            const img = new Image();
+            img.src = el.dataset.bg;
+            img.onload = () => {
+              el.style.backgroundImage = `url(${el.dataset.bg})`;
+            };
+          }
+
+          if (el.classList.contains("lazy-img")) {
+            el.src = el.dataset.src;
+          }
+
+          observer.unobserve(el);
+        }
+      });
+    },
+    { threshold: 0.1 },
+  );
+
+  lazyElements.forEach((el) => observer.observe(el));
+};
+
 // reveal on scroll
 document.addEventListener("DOMContentLoaded", () => {
+  lazyLoading();
   mobileMenuToggle();
 
   const allSections = document.querySelectorAll(".section");
